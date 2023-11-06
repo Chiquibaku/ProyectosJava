@@ -1,0 +1,25 @@
+package primerexercise;
+
+import java.util.Scanner;
+
+
+public class PrimerExercise {
+
+    public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        double nota, not2, not3, prom;
+            System.out.println("Ingrese nota 1  ");
+            nota = leer.nextDouble();
+            System.out.println("Ingrese nota 2 ");
+            not2 = leer.nextDouble();
+            System.out.println("Ingrese nota 2 ");
+            not3 = leer.nextDouble();
+           
+            nota = nota * 0.3;
+            not2 = not2 * 0.3;
+            not3 = not3 * 0.4;
+            prom = nota + not2 + not3;
+            System.out.println("El promedio ponderado es " + prom );
+    }
+}
