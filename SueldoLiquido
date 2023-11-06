@@ -1,0 +1,52 @@
+package martinblanco4dpv;
+
+import java.util.Scanner;
+
+
+public class MartinBlanco4DPV {
+
+ 
+    public static void main(String[] args) {
+          
+         Scanner leer = new Scanner(System.in);
+         double sueldoBruto[] = new double[5];
+         double sueldoLiquido[] = new double[5];
+         String nomTrabajador[] = new String[5];
+         int e = 0 , d = 1 , f = 1, h = 1, x = 1 ;
+         String auxNom;
+         double auxSueldos;
+        for (e = 0; e <= 4 ; e++) {
+            System.out.println("Ingrese sueldo del trabajador " + f);
+            sueldoBruto[e] = leer.nextDouble();
+            System.out.println("Ingrese el nombre del trabajador " + h);
+            nomTrabajador[e] = leer.next();
+            f++;
+            h++;
+        }
+      
+        for (e = 0; e <= 4 ; e++) {
+            sueldoLiquido[e] = sueldoBruto[e]*0.81;
+        }
+        
+        
+         for (e = 0; e <= 3; e++) {
+             
+             for (int n = 0; n <= 3; n++) {
+                 if (sueldoLiquido[n] < sueldoLiquido[n+1]) {
+                    
+                    auxSueldos = sueldoLiquido[n+1];
+                    sueldoLiquido[n+1] = sueldoLiquido[n];
+                    sueldoLiquido[n] = auxSueldos;
+                
+                    auxNom = nomTrabajador[n];
+                    nomTrabajador[n+1] = nomTrabajador[n];
+                    nomTrabajador[n] = auxNom;
+                    
+            }
+          }
+        }
+        
+        for (int l = 0; l <= 2; l++) {
+            System.out.println(nomTrabajador[l]);
+          
+        }
