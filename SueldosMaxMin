@@ -1,0 +1,39 @@
+package sueldomaxmintrabajadores;
+        
+import java.util.Scanner;
+
+public class SueldoMaxMinTrabajadores {
+
+
+    public static void main(String[] args) {
+        //Creacion Scanner
+    Scanner entrada = new Scanner (System.in);
+    string nombreMenor ;
+    String nombreTrabajador ;
+    int edadTrabajador;
+    int sueldoTrabajador;
+    int contador = 1;
+    int sueldoMayor = 0;
+    int sueldoMenor = 1000000;
+    int edadmayor;
+    int edadMenor;
+    
+    while (contador <= 5) {
+       System.out.println("Ingrese el nombre");
+       nombreTrabajador = entrada.next();
+       System.out.println("Ingrese la edad");
+       edadTrabajador = entrada.nextInt();
+       System.out.println("Ingrese el sueldo");
+       sueldoTrabajador = entrada.nextInt();
+       if ((sueldoTrabajador >= 400000) && (edadTrabajador >= 18) && (edadTrabajador <= 65)); {
+       if (sueldoTrabajador > sueldoMayor); {
+       sueldoMayor = sueldoTrabajador;
+       
+       if (sueldoTrabajador <sueldoMenor) {
+           sueldoMenor = sueldoTrabajador;
+           nombreMenor = nombreTrabajador;
+           edadMenor = edadTrabajador;
+       }
+        
+    }
+}
