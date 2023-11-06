@@ -1,0 +1,89 @@
+package proyectomb;
+
+import java.util.Scanner;
+
+
+public class ProyectoMB {
+    
+    
+    
+
+    public static void main(String[] args) {
+   
+          Scanner leer = new Scanner (System.in);   
+    
+          int sueldo[];
+          sueldo = new int[6];
+          int edad [];
+          edad = new int[6];
+          String nombre[];
+          nombre = new String[6];
+          int i;
+          i = 1;
+          int d = 0;
+          int o = 0;
+          int aux = 0;
+          int aux2 = 0;
+          String aux3 ;
+          int j= 0;
+          
+          do {
+             
+        System.out.println("======================================");
+        System.out.println(" Bienvenido al sistema de trabajadores"); 
+        System.out.println("======================================");
+        System.out.println("Ingrese el nombre del trabajador " + i);
+        nombre[i] = leer.next();
+              do {
+                    System.out.println(" Ingrese la edad del trabajador " + i);
+        edad[i] = leer.nextInt();
+              } while (edad[i] < 18 || edad[i] > 65);
+              
+              do {
+                  System.out.println("Ingrese el sueldo del trabajador " + i);
+        sueldo[i] = leer.nextInt();
+              } while (sueldo[i] < 399999);
+      
+            i = i + 1;
+        } while (i <= 5);
+          
+          do {
+            
+              o = d + 1;
+              
+              do {
+                  if (sueldo[o] < sueldo[d])
+                  
+                  aux = sueldo[d];
+                  sueldo[d] = sueldo[o];
+                  sueldo[o] = aux;
+                  
+                  aux3 = nombre[d];
+                  nombre[d] = nombre[o];
+                  nombre[o] = aux3;
+                  
+                  aux2 = edad[d];
+                  edad[d] = edad[o];
+                  edad[o] = aux2;
+                          
+                 o++;
+                 
+              } while (o <= 4);
+             
+              d++;
+ 
+        } while (d <= 3);
+  
+          
+    for ( int x=0; x<5; x++)      
+    
+     System.out.println("=========================================\n"
+     + " Nombre de el trabajador : " + nombre[x]
+     + " Edad de el trabajador : " + edad[x]
+     + " Sueldo de el trabajador : $ " + sueldo[x]
+     );
+    
+    
+    
+    
+        
