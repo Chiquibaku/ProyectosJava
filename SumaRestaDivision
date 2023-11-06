@@ -1,0 +1,47 @@
+package segundoexercise;
+
+import java.util.Scanner;
+
+
+public class SegundoExercise {
+
+    
+    public static void main(String[] args) {
+    
+    Scanner leer = new Scanner(System.in);
+    int num, num2, opc, suma, rest, div;
+    
+        System.out.println("Ingrese numero uno ");
+        num = leer.nextInt();
+        System.out.println("Ingrese numero dos ");
+        num2 = leer.nextInt();
+        System.out.println("======Seleccione la operación que desea ejecutar=======\n"
+                + "1.- Suma\n"
+                + "2.- Resta\n "
+                + "3.- División\n"
+                + "4.- Si desea salir escriba 9\n"
+                + "==============================================================");
+                opc = leer.nextInt();
+        
+        switch (opc) {
+            case 1:
+                suma = num + num2;
+                System.out.println("El resultado de la suma es " + suma);
+                break;
+            case 2:
+                rest = num - num2;
+                System.out.println("El resultado de la resta es " + rest);
+                break;
+            case 3:
+                div = num / num2;
+                System.out.println("El resultado de la división es " + div);
+                break;
+            case 9:
+                System.out.println("Hasta luego <3");
+                break;
+            default:
+                throw new AssertionError();
+        }
+    }
+    
+}
