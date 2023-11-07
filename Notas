@@ -1,0 +1,41 @@
+package arreglosarray;
+
+import java.util.Scanner;
+
+
+public class ArreglosArray {
+
+ 
+    public static void main(String[] args) {
+      Scanner leer = new Scanner  (System.in);
+      
+      String datos[][] = new String [5][3];
+      float notas[][] = new float [5][4];
+        
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Ingrese nombre");
+            datos[i][0] = leer.next();
+            
+            System.out.println("Ingrese apellido");
+            datos[i][1] = leer.next();
+            
+            System.out.println("Ingrese curso");
+            datos[i][2] = leer.next();
+            
+            System.out.println("Ingrese nota de Lenguaje");
+            notas[i][0] = leer.nextFloat();
+            
+            System.out.println("Ingrese nota de Matemática");
+            notas[i][1] = leer.nextFloat();
+            
+            System.out.println("Ingrese nota de Ingles");
+            notas[i][2] = leer.nextFloat();
+            
+            System.out.println("Ingrese nota de Historia");
+            notas[i][3] = leer.nextFloat();
+        }
+  
+    }
+    
+}
