@@ -1,0 +1,91 @@
+package eliminarcaracteresvacios;
+
+
+public class EliminarCaracteresVacios {
+
+ 
+    public static void main(String[] args) {
+    
+        //Un espacio al principio, espacios en el medio y un espacio al final
+      String palabra = " Hola, que   tal ";
+      String palabraAux;
+      String str;
+      String str2;  
+      String str3;
+      String str4;
+      String s;
+      String s2;
+     palabraAux = palabra.trim();
+      System.out.println(palabraAux);
+        //Elimina los espacios al comienzo y al final
+        //Resultado: "Hola, que   tal"
+        
+        
+      //Reemplaza todos los espacios por el caracter vacio
+      palabraAux = palabra.replaceAll(" ", "");
+      System.out.println(palabraAux); 
+      //Resultado "Hola,quetal"
+        
+        
+        
+     //Reemplaza varios espacios en blanco uno por uno
+     palabraAux = palabra.replaceAll(" +", " ");
+     System.out.println(palabraAux);
+     //Resultado " Hola, que tal "   
+        
+        
+      //Reemplaza varios espacios por uno y elimina los del comienzo y el final
+      palabraAux = palabra.replaceAll(" +", " ").trim();
+      System.out.println(palabraAux);
+     //Resultado "Hola, que tal"   
+
+     
+     
+     //Cuenta caracteres en cadenas el Lenght sea String o Int
+    
+     // 
+        
+     str = "Hello, World_123!!"; 
+     str = str.replaceAll("[^\\W+]", "");
+        System.out.println(str);
+     
+     str2 = "Hello, World_123!!";
+     str2 = str2.replaceAll("[:\\w]", "");
+     System.out.println(str2);
+     
+     str3 = "Hello, Wolrd_123!!";
+     str3 = str3.replaceAll("", " ");
+             
+     //charAt permite crear una estructura de cadena de caracteres a un arreglo parte por parte del caracter
+     
+     
+     //https.//www.techiedelight.com
+             
+             
+     
+     s = "Hola mundo CHILE";
+     
+        System.out.println(s.toLowerCase());
+     // el toLowerCase convierte el String guardado en la variable en minuscula
+        System.out.println(s.toUpperCase());
+    // el toUpperCase convierte el String guardado en la variable en mayuscula 
+    
+    s2 = "capital de chile";
+    
+    s2 = s2.substring(0, 1).toUpperCase() + s2.substring(1);
+    //Este transforma el primer caracter a mayuscula
+        System.out.println(s2);
+    
+    int largo = palabra.length();
+    char palabraChar[] = new char[largo];
+ 
+        for (int i = 0; i < s.length(); i++) {
+            palabraChar[i] = s.charAt(i);
+        }
+    
+    
+    
+    
+    }
+    
+}
