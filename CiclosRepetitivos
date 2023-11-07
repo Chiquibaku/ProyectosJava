@@ -1,0 +1,79 @@
+package ciclosrepetitivosmb;
+
+import java.util.Scanner;
+
+public class CiclosRepetitivosMB {
+
+    
+    public static void main(String[] args) {
+ 
+     int tablas;
+     int num;
+     int metodos;
+     int seleccion;
+     int resultado;
+     
+     Scanner leer = new Scanner(System.in);
+     
+        System.out.println("==========TABLAS=========\n"
+                + "Ingrese su opcion\n"
+                + "1.- Usar For\n"
+                + "2.- Usar While\n"
+                + "3.- Usar Do\n"
+                + "4.- Salir\n"
+                + "============================");
+     
+        metodos = leer.nextInt();
+        
+        
+        switch (metodos) {
+            case 1:
+                System.out.println("Ingrese la tabla que desea calcular");
+                tablas = leer.nextInt();
+                
+                for (int i = 0; i < 10; i++) {
+                    resultado = tablas * i;
+                    System.out.println(tablas + " X " + i + " = " + resultado);
+                }
+                
+                break;
+                
+            case 2:      
+                int i = 1;
+                System.out.println("Ingrese la tabla que desea calcular");
+                tablas = leer.nextInt();
+                while ( i <= 10) {
+                    resultado = tablas * i;
+                System.out.println(tablas + " X " + i + " = " + resultado);
+                i++;
+                 }
+                break;
+                
+            case 3:  
+                
+                System.out.println("Ingrese la tabla que desea calcular");
+                tablas = leer.nextInt();
+                i = 1;
+                do {
+                    resultado = tablas * i;
+                    System.out.println(tablas + " X " + i + " = " + resultado);
+                i++;
+                } while (i != 11);
+                
+                
+                break;
+            case 4:    
+                
+                
+                break;
+            default:
+                throw new AssertionError();
+        }
+        
+        
+        
+        
+        
+    }
+    
+}
