@@ -1,0 +1,124 @@
+Primer ejercicio
+package primerexercise;
+
+import java.util.Scanner;
+
+
+public class PrimerExercise {
+
+    public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        double nota, not2, not3, prom;
+            System.out.println("Ingrese nota 1  ");
+            nota = leer.nextDouble();
+            System.out.println("Ingrese nota 2 ");
+            not2 = leer.nextDouble();
+            System.out.println("Ingrese nota 2 ");
+            not3 = leer.nextDouble();
+           
+            nota = nota * 0.3;
+            not2 = not2 * 0.3;
+            not3 = not3 * 0.4;
+            prom = nota + not2 + not3;
+            System.out.println("El promedio ponderado es " + prom );
+    }
+}
+
+Segundo ejercicio
+
+package segundoexercise;
+
+import java.util.Scanner;
+
+
+public class SegundoExercise {
+
+    
+    public static void main(String[] args) {
+    
+    Scanner leer = new Scanner(System.in);
+    int num, num2, opc, suma, rest, div;
+    
+        System.out.println("Ingrese numero uno ");
+        num = leer.nextInt();
+        System.out.println("Ingrese numero dos ");
+        num2 = leer.nextInt();
+        System.out.println("======Seleccione la operación que desea ejecutar=======\n"
+                + "1.- Suma\n"
+                + "2.- Resta\n "
+                + "3.- División\n"
+                + "4.- Si desea salir escriba 9\n"
+                + "==============================================================");
+                opc = leer.nextInt();
+        
+        switch (opc) {
+            case 1:
+                suma = num + num2;
+                System.out.println("El resultado de la suma es " + suma);
+                break;
+            case 2:
+                rest = num - num2;
+                System.out.println("El resultado de la resta es " + rest);
+                break;
+            case 3:
+                div = num / num2;
+                System.out.println("El resultado de la división es " + div);
+                break;
+            case 9:
+                System.out.println("Hasta luego <3");
+                break;
+            default:
+                throw new AssertionError();
+        }
+    }
+    
+}
+
+Tercer ejercicio
+
+package tercerexercise;
+
+import java.util.Scanner;
+
+
+public class TercerExercise {
+
+
+    public static void main(String[] args) {
+        
+      Scanner leer = new Scanner(System.in);
+      String contra = "pro101";
+      String user = "aiep2023";  
+      String userCom = "";
+      String contCom = "";
+      int cont = 1;
+        
+        do {
+            
+            System.out.println("Ingrese usuario ");
+            userCom = leer.next();
+            System.out.println("Ingrese contraseña ");
+            contCom = leer.next();
+            
+            if (userCom.equals(user) && contCom.equals(contra)) {
+                System.out.println("Bienvenido a tu cuenta \n}"
+                        + "=========================================");
+                cont = 4;
+            }   else{
+                System.out.println("El usuario o contraseña es incorrecto, intento "+ cont + " de 3");
+                cont++;
+                if (cont == 4) {
+                    System.out.println("Contraseña bloqueada por no cumplir los 3 intentos");
+                }
+            
+            }
+            
+        } while (cont !=4);
+        
+        
+        
+
+    }
+    
+}
